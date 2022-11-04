@@ -1,0 +1,141 @@
+/* General Site styling: General */
+:root {
+  --dark: #422f01;
+  --shade: #9f8950;
+  --bright: #ffdf92;
+  --white: #ffffff;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  
+  border: black solid 1px;
+  
+  
+}
+
+body {
+  color:var(--dark);
+  background-color: var(--bright);
+  font-family: 'Aileron Regular';
+  font-weight: 300;
+
+  
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark);
+}
+
+a:hover {
+  color: var(--shade);
+}
+
+
+/* General Site styling: Navbar */
+
+.navbar {
+  padding: 2% 10%;
+  align-content: center;
+  
+}
+
+.navbar * {
+  display: flex;
+  font-weight: 350;
+
+  
+}
+
+.navbar img {
+  width: 2rem;
+  height: 2rem;
+  margin: 10px 5px 10px 0;
+}
+
+.logo {
+  justify-content: start;
+}
+
+.logo-name {
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  padding: 0 8px 0 0;
+  
+}
+
+.nav-menu {
+  flex-direction: row;
+  margin: 0;
+}
+
+.nav-menu a {
+  margin: 20px 20px 20px 20px;
+  padding: 5px 8px;
+}
+
+
+
+/* General Site styling: Footer */
+footer {
+  width: 100vw;
+  height: 45vh;
+  padding: 2% 10%;
+  background-color: #ffffff;
+  
+}
+
+.contact-us {
+  color: var(--shade);
+  font-family: 'Source Serif Pro';
+  font-weight: 700;
+  font-size: 4rem;
+  margin: 2rem 0;
+}
+
+
+footer div {
+  display: flex;
+  
+  
+  
+}
+.contact-content {
+  justify-content: space-between;
+}
+
+.contact-item {
+  flex-direction: column;
+  font-size: 0.5rem;
+  
+  
+  
+  
+
+}
+
+.contact-title{
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  font-weight: 500;
+  
+
+}
+
+/* two box layout */
+.left-box * {
+  height: auto;
+  width: 50vw;
+  
+}
+
+.left-box *{
+  height: auto;
+  width: 50vw;
+  
+}
+
