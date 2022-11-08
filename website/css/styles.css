@@ -10,8 +10,10 @@
 * {
   margin: 0;
   padding: 0;
-  
+  /*this line below is for design purpose only
+  Please delete before submission.*/
   border: black solid 1px;
+  
   
   
 }
@@ -38,22 +40,21 @@ a:hover {
 /* General Site styling: Navbar */
 
 .navbar {
-  padding: 2% 10%;
-  align-content: center;
-  
+  padding: 10vh 10vw 0 10vw;
 }
 
 .navbar * {
   display: flex;
-  font-weight: 350;
-
-  
+  align-items: center;
+  font-weight: 4rem;
+  font-weight: 500;
 }
 
 .navbar img {
   width: 2rem;
   height: 2rem;
   margin: 10px 5px 10px 0;
+  
 }
 
 .logo {
@@ -63,14 +64,16 @@ a:hover {
 .logo-name {
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
+  font-size: 2.5rem;
   padding: 0 8px 0 0;
+  font-family: 'Source Serif Pro';
   
 }
 
 .nav-menu {
   flex-direction: row;
   margin: 0;
+  font-size: 1.2rem;
 }
 
 .nav-menu a {
@@ -82,11 +85,15 @@ a:hover {
 
 /* General Site styling: Footer */
 footer {
-  width: 100vw;
+  width: 100%;
   height: 45vh;
-  padding: 2% 10%;
-  background-color: #ffffff;
   
+  
+}
+
+footer > div {
+  margin: 5vh 10vw 5vh 10vw;
+  flex-direction: column;
 }
 
 .contact-us {
@@ -96,7 +103,10 @@ footer {
   font-size: 4rem;
   margin: 2rem 0;
 }
-
+footer img {
+  width: 100%;
+  height: auto;
+}
 
 footer div {
   display: flex;
@@ -111,6 +121,7 @@ footer div {
 .contact-item {
   flex-direction: column;
   font-size: 0.5rem;
+  margin-bottom: 3rem;
   
   
   
@@ -139,3 +150,71 @@ footer div {
   
 }
 
+/* one title with 3 columns layout */
+.title-with-3-columns {
+  padding: 10vh 10vw;
+  
+  
+
+}
+
+.title-with-3-columns  * {
+  display:flex;
+  flex-direction: column;
+  
+  
+
+}
+
+.title-with-3-columns > div {
+  flex-direction: row;
+  
+}
+.up-box {
+  justify-content: center;
+}
+
+.down-box {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.down-box > div {
+  flex-direction: column;
+  width: 20vw;
+  align-items: center;
+  min-width: 200px;
+}
+
+.down-box * {
+  align-content: center;
+  text-align: center;
+  
+}
+.title-with-3-columns  img {
+  width: 100%;
+  height: auto;
+  
+  
+}
+.title-with-3-columns h2, h3{
+  font-family: 'Source Serif Pro';
+}
+
+.title-with-3-columns h2 {
+  font-size: 3em;
+}
+
+.title-with-3-columns h3 {
+  font-size: 1.2rem;
+}
+
+.down-box .pic{
+  margin: 2rem 0;
+}
+.down-box .topic, .content {
+  margin: 0.5rem 0;
+}
+.title-with-3-columns p {
+  font-size: 0.8rem;
+}

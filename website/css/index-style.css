@@ -1,60 +1,57 @@
-@import url(font-style.css);
-@import url(styles.css);
-
 .banner {
-  padding: 0 10vw;
-  width: 100vw;
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
+    padding: 0 10vw;
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+  .slogan {
+    
+    font-size: 6rem;
+    flex-direction: column;
+    font-family: 'Source Serif Pro';
+    font-weight: 600;
+  }
+
+  .button {
+    height: 3rem;
+    width: 15rem;
+    display: flex;
+    justify-content: center;
+    background-color: var(--dark);
+    
+    align-items: center;
+    margin-top: 5vh;
+    border-radius: 3rem;
+    align-content: flex-start;
+    
+  }
+  .button a {
+    
+    font-size: 1.5rem;
+    color: var(--white);
+  }
+
+  .company-intro {
+    display: flex;
+    flex-direction: row;
+    align-items: center ;
+    
+  }
+
+  .company-intro .left-box {
   
+  }
 
-}
-.slogan {
-  padding: 2vh 0;
-  font-size: 12vw;
-  flex-direction: column;
-  font-family: 'Source Serif Pro';
-  font-weight: 600;
-}
+  .company-intro-title {
+    font-size: 3rem;
+    width:30vw;
 
-.button {
-  height: 3rem;
-  width: 15rem;
-  display: flex;
-  justify-content: center;
-  background-color: var(--dark);
-  
-  align-items: center;
-  margin-top: 5vh;
-  border-radius: 3rem;
-  align-content: flex-start;
-  
-}
-.button a {
-  
-  font-size: 1.5rem;
-  color: var(--white);
-}
+  }
 
-.company-intro {
-  display: flex;
-  flex-direction: row;
-  align-items: center ;
-  
-}
-
-.company-intro .left-box {
- 
-}
-
-.company-intro-title {
-  font-size: 3rem;
-  width:30vw;
-
-}
-
-.company-intro img {
-  height:auto;
-  width: 50vw;
-}
+  .company-intro img {
+    height:auto;
+    width: 50vw;
+  }
