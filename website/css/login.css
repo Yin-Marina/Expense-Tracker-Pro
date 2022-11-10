@@ -1,0 +1,110 @@
+body {
+  font-family: monospace;
+  background: #ffdf92;
+}
+
+.navbar {
+  padding: 10vh 10vw 0 10vw;
+}
+  
+.navbar * {
+  display: flex;
+  align-items: center;
+  font-weight: 4rem;
+  font-weight: 500;
+}
+  
+.navbar img {
+  width: 2rem;
+  height: 2rem;
+  margin: 10px 5px 10px 0;
+  
+}
+
+.logo {
+  justify-content: start;
+}
+
+.logo-name {
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  padding: 0 8px 0 0;
+  font-family: 'Source Serif Pro';
+  
+}
+
+.nav-menu {
+  flex-direction: row;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.nav-menu a {
+  margin: 20px 20px 20px 20px;
+  padding: 5px 8px;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  width: 285px;
+  margin: -140px 0 0 -182px;
+  padding: 40px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 20px;
+  line-height: 1;
+  color: #44c4e7;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+input {
+  outline: none;
+  display: block;
+  width: 100%;
+  margin: 0 0 20px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+input:focus {
+  border: 1px solid #44c4e7;
+}
+
+button {
+  cursor: pointer;
+  background: #44c4e7;
+  width: 100%;
+  padding: 10px 15px;
+  border: 0;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+button:hover {
+  background: #369cb8;
+}
+
+a {
+  text-decoration: none;
+  color: #44c4e7;
+}
+
+a:hover {
+  color: #369cb8;
+}
+
+.footer {
+  margin-top: 20px;
+}
