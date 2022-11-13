@@ -81,6 +81,13 @@ input:focus {
   border: 1px solid #44c4e7;
 }
 
+.field > p {
+  margin-top: -10px;
+  text-align: left;
+  color: red;
+  display: none;
+}
+
 button {
   cursor: pointer;
   background: #44c4e7;

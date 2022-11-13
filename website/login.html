@@ -25,14 +25,21 @@
     </nav>
     <div class="container">
       <h1>Login</h1>
-      <form>
-        <input placeholder="Email" type="text" id="email">
-        <input placeholder="Password" type="password" id="password">
+      <form onsubmit="return validateForm();">
+        <div class="field">
+          <input placeholder="Email" type="text" id="email">
+          <p id="emailError"></p>
+        </div>
+        <div class="field">
+          <input placeholder="Password" type="password" id="password">
+          <p id="passwordError"></p>
+        </div>
         <button id="submit">Login</button>
       </form>
       <p class="footer">Don't have an account?
         <a href="signup.html">Sign up</a>
       </p>
     </div>
+    <script type="text/javascript" src="js/auth.js"></script>
   </body>
 </html>
