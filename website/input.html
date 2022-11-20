@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Group6">
+    <title>input</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/input.css">
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="./img/logo.png" alt="logo" />
+        <div class="logo-name">Expense Tracker Pro</div>
+      </div>
+      <div class="nav-menu">
+        <a href="index.html">Home</a>
+  
+        <a href="input.html">Input</a>
+  
+        <a href="report.html">Report</a>
+  
+        <a href="login.html">Sign in</a>
+      </div>
+    </nav>
+    <div class="container">
+      <div>
+        <div class="record">
+            <h1>Record Your Income and Spending</h1>
+            <form>
+              <div class="type">
+                <label for="select_type">Please select the Income/Spending type:</label>
+                <select name="select_type" id="select_type">
+                  <option value="Income">Income</option>
+                  <option value="Spend">Spending</option>
+                 </select>
+                <p id="typeError"></p>
+              </div>
+              <div class="date">
+                <label for="add_date">Please select the Income/Spending date:</label>
+                <input placeholder="date" type="date" id="date">
+                <p id="dateError"></p>
+              </div>
+              <div class="account">
+                <label for="select_account">Please select the Income/Spending account:</label>
+                <select name="select_account" id="select_account">
+                  <option value="Cash">Cash</option>
+                  <option value="Card">Card</option>
+                 </select>
+                <p id="cardError"></p>
+              </div>
+              <div class="amount">
+                <label for="add_account">Please add the Income/Spending Amount:&nbsp;&nbsp;</label>
+                <input placeholder="amount" type="number" id="amount">
+                <p id="amountError"></p>
+              </div>
+              <div class="note">
+                <label for="add_note">Please add the Income/Spending Note:</label>
+                <textarea id="note" name="note" cols="25" rows="2"></textarea>
+                <p id="noteError"></p>
+              </div>
+              <div class="button">
+              <button id="submit">Submit</button>
+              </div>
+            </form>
+          </div>
+      </div>
+
+
+    </div>
+
+ </body>
+</html>
