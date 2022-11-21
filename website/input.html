@@ -27,47 +27,78 @@
       </div>
     </nav>
     <div class="container">
-      <div>
-        <div class="record">
+      <form id="input_form">
+        <table id="input_table">
+          <tr>
+            <td colspan="2" style="text-align:center">
+           
             <h1>Record Your Income and Spending</h1>
-            <form>
-              <div class="type">
+     
+            </td>
+          </tr>
+          <tr>
+            <td>
+            
                 <label for="select_type">Please select the Income/Spending type:</label>
+    
+              </td>
+              <td>
                 <select name="select_type" id="select_type">
                   <option value="Income">Income</option>
                   <option value="Spend">Spending</option>
                  </select>
-                <p id="typeError"></p>
-              </div>
-              <div class="date">
+              </td>
+          </tr> 
+          <tr>
+            <td>  
                 <label for="add_date">Please select the Income/Spending date:</label>
+
+            </td>
+            <td> 
                 <input placeholder="date" type="date" id="date">
-                <p id="dateError"></p>
-              </div>
-              <div class="account">
-                <label for="select_account">Please select the Income/Spending account:</label>
+            </td>
+            <tr>
+              <td>
+               <label for="select_account">Please select the Income/Spending account:</label>
+              </td>
+              <td>
                 <select name="select_account" id="select_account">
                   <option value="Cash">Cash</option>
                   <option value="Card">Card</option>
                  </select>
-                <p id="cardError"></p>
-              </div>
-              <div class="amount">
-                <label for="add_account">Please add the Income/Spending Amount:&nbsp;&nbsp;</label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+     
+                  <label for="add_account">Please add the Income/Spending Amount:&nbsp;&nbsp;</label>
+          
+              </td>
+              <td>
                 <input placeholder="amount" type="number" id="amount">
-                <p id="amountError"></p>
-              </div>
-              <div class="note">
+              </td>
+           </tr>
+           <tr>
+            <td>
+       
                 <label for="add_note">Please add the Income/Spending Note:</label>
+        
+            </td>
+            <td>
                 <textarea id="note" name="note" cols="25" rows="2"></textarea>
-                <p id="noteError"></p>
-              </div>
-              <div class="button">
+            </td>
+           </tr> 
+           <tr>
+            <td colspan="2" style="text-align:center">
+          
               <button id="submit">Submit</button>
-              </div>
-            </form>
-          </div>
+    
+            </td>
+            </tr>
+        </table>
+       </form>
       </div>
+
 
 
     </div>
