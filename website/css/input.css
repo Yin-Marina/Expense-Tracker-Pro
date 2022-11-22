@@ -12,3 +12,33 @@ th, td {
     padding-left: 30px;
     padding-right: 40px;
   }
+#submit{
+    background-color: rgb(255, 136, 0);
+    border: none;
+    border-radius:5px;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 8px 4px;
+    cursor: pointer;
+}
+#reset{
+    background-color:rgb(185, 133, 234);
+    border: none;
+    border-radius:5px;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 8px 4px;
+    cursor: pointer;
+}
+.warning{
+    color: red;
+    }
+.redborder { border: 1px solid red; }

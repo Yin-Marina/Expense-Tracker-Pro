@@ -9,6 +9,7 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/input.css">
+    <script src="js/input.js"  defer></script>
   </head>
   <body>
     <nav class="navbar">
@@ -27,7 +28,7 @@
       </div>
     </nav>
     <div class="container">
-      <form id="input_form">
+      <form name="form" action="input.html" method="get" onsubmit="return validate();">
         <table id="input_table">
           <tr>
             <td colspan="2" style="text-align:center">
@@ -37,7 +38,7 @@
             </td>
           </tr>
           <tr>
-            <td>
+            <td style="text-align:right">
             
                 <label for="select_type">Please select the Income/Spending type:</label>
     
@@ -50,15 +51,17 @@
               </td>
           </tr> 
           <tr>
-            <td>  
+            <td style="text-align:right">   
                 <label for="add_date">Please select the Income/Spending date:</label>
 
             </td>
             <td> 
+              <div class="dateField">
                 <input placeholder="date" type="date" id="date">
+              </div>
             </td>
             <tr>
-              <td>
+              <td style="text-align:right">
                <label for="select_account">Please select the Income/Spending account:</label>
               </td>
               <td>
@@ -69,17 +72,19 @@
               </td>
             </tr>
             <tr>
-              <td>
+              <td style="text-align:right">
      
-                  <label for="add_account">Please add the Income/Spending Amount:&nbsp;&nbsp;</label>
+                  <label for="add_account">Please add the Income/Spending Amount:</label>
           
               </td>
               <td>
-                <input placeholder="amount" type="number" id="amount">
+                <div class="amountField">
+                <input placeholder="amount" type="number" id="amount" step="0.01" value="0.00">
+                </div>
               </td>
            </tr>
            <tr>
-            <td>
+            <td style="text-align:right">
        
                 <label for="add_note">Please add the Income/Spending Note:</label>
         
@@ -91,8 +96,8 @@
            <tr>
             <td colspan="2" style="text-align:center">
           
-              <button id="submit">Submit</button>
-    
+              <button type="submit" id="submit" onclick="validate()">Submit</button>
+              <button type="reset" id="reset">Reset</button>
             </td>
             </tr>
         </table>
