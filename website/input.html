@@ -28,7 +28,7 @@
       </div>
     </nav>
     <div class="container">
-      <form name="form" action="input.html" method="get" onsubmit="return validate();">
+      <form name="form" action="inputproces.php" method="post" onsubmit="return validate();">
         <table id="input_table">
           <tr>
             <td colspan="2" style="text-align:center">
@@ -40,27 +40,28 @@
           <tr>
             <td style="text-align:right">
             
-                <label for="select_type">Please select the Income/Spending type:</label>
+                <label for="select_type">Please select the Spending type:</label>
     
               </td>
               <td>
-                <select name="select_type" id="select_type">
-                  <option value="Income">Income</option>
-                  <option value="Spend">Spending</option>
+                <select name="type" id="select_type">
+                  <option value="1">Grocery</option>
+                  <option value="2">Entertainment</option>
+                  <option value="3">Other</option>
                  </select>
               </td>
           </tr> 
           <tr>
             <td style="text-align:right">   
-                <label for="add_date">Please select the Income/Spending date:</label>
+                <label for="add_date">Please select the Spending date:</label>
 
             </td>
             <td> 
               <div class="dateField">
-                <input placeholder="date" type="date" id="date">
+                <input placeholder="date" type="date" id="date" name="date">
               </div>
             </td>
-            <tr>
+            <!-- <tr>
               <td style="text-align:right">
                <label for="select_account">Please select the Income/Spending account:</label>
               </td>
@@ -70,7 +71,7 @@
                   <option value="Card">Card</option>
                  </select>
               </td>
-            </tr>
+            </tr> -->
             <tr>
               <td style="text-align:right">
      
@@ -79,14 +80,14 @@
               </td>
               <td>
                 <div class="amountField">
-                <input placeholder="amount" type="number" id="amount" step="0.01" value="0.00">
+                <input placeholder="amount" type="number" id="amount" step="0.01" value="0.00" name="amount">
                 </div>
               </td>
            </tr>
            <tr>
             <td style="text-align:right">
        
-                <label for="add_note">Please add the Income/Spending Note:</label>
+                <label for="add_note">Please add the Spending Note:</label>
         
             </td>
             <td>
