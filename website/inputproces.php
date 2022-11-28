@@ -21,8 +21,9 @@ if (mysqli_connect_error()){
 $sql = "INSERT INTO transactions (type, date, amount, noted)"
         VALUE ('$type', 'date', 'amount','note');
 
-$stmt = mysqli_stmt_init($conn);
+        $result = mysqli_query($conn, $sql);
 
+        $id = mysqli_insert_id($conn);
 
 
 ?>
