@@ -90,9 +90,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `password`) VALUES
-(1, 'Heather', 'Du', 'test1@test.com', 'test1'),
-(2, 'Candice', 'Liu', 'test2@test.com', 'test2'),
-(3, 'Mutao', 'Yin', 'test3@test.com', 'test3');
+(1, 'Heather', 'Du', 'test1@test.com', 'test111'),
+(2, 'Candice', 'Liu', 'test2@test.com', 'test222'),
+(3, 'Mutao', 'Yin', 'test3@test.com', 'test333');
 
 --
 -- Indexes for dumped tables
