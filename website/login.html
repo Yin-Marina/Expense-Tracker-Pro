@@ -46,7 +46,7 @@
   <div class="container">
     <div class="wrap">
       <h1>Login</h1>
-      <form onsubmit="return validateForm();">
+      <form action = "authentication.php" onsubmit = "return validation()" method = "POST">
         <div class="field">
           <input placeholder="Email" type="text" id="email">
           <p id="emailError"></p>
