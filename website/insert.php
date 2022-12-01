@@ -16,10 +16,6 @@ $connection = mysqli_connect($server_name, $user_name, $password, $database_name
 
 $grocery_type = $spending_date = $amount = $note = "";
 
-$grocery_type = $_POST['type'];
-$spending_date = $_POST['spending_date'];
-$amount = $_POST['add_amount'];
-$note = $_POST['add_note'];
 
 //close the connection
 mysqli_close($connection);
@@ -36,7 +32,6 @@ mysqli_close($connection);
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
   <link rel="stylesheet" type="text/css" href="css/input.css">
-
   <link
     href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
     rel="stylesheet" />
@@ -50,33 +45,41 @@ mysqli_close($connection);
   <!--  Bootstrap Optional theme -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
     integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-
-  <script src="js/input.js" defer></script>
+    <script src="js/input.js"  defer></script>
 </head>
 
 <body>
 
   <div class="container">
-    <form name="form" action="" method="post" onsubmit="return validate();">
+    <form name="form" action="insert_process.php" method="post" onsubmit="return validate();">
       <h1>Record Your Spending</h1>
+      <div>
       <label for="select_type">Please select the Spending type:</label>
-      <select name="type" id="select_type">
-        <option value="1">Grocery</option>
-        <option value="2">Entertainment</option>
-        <option value="3">Other</option>
+      <select name="select_type" id="select_type">
+        <option value=1>Grocery</option>
+        <option value=2>Entertainment</option>
+        <option value=3>Other</option>
       </select>
+      </div>
+
+      <div class="dateField">
       <label for="spending_date">Please select the Spending date:</label>
       <input placeholder="date" type="date" id="date" name="spending_date">
+      </div>
+
+      <div class="amountField">
       <label for="add_amount">Please add the Income/Spending Amount:</label>
       <input placeholder="amount" type="number" id="amount" step="0.01" value="0.00" name="add_amount">
+      </div>
+
+      <div>
       <label for="add_note">Please add the Spending Note:</label>
       <textarea id="note" name="add_note" cols="25" rows="2"></textarea>
+      </div>
       <button type="submit" id="submit" onclick="validate()">Submit</button>
       <button type="reset" id="reset">Reset</button>
     </form>
   </div>
-</div>
 
 </body>
 
