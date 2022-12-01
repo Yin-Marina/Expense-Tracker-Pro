@@ -1,26 +1,19 @@
 /* Define color pallete */
-:root {
-  --bar: #62b6cb;
-  --background: #bee9e8;
-  --text: #1b4965;
-  --highlight-light: #cae9ff;
-  --highlight-dark: #40798c;
-}
+
 
 body {
-  background: var(--background);
-  color: var(--text);
+  color: var(--bs-dark)
 }
 
 /* Outer Interface: Header */
 .navbar {
   padding-left: 10% !important;
   padding-right: 10% !important; 
-  background: var(--bar)!important;
+  
 }
 .footer {
 
-  background: var(--bar)!important;
+  
 }
 
 
