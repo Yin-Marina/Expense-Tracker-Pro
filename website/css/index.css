@@ -1,0 +1,14 @@
+.banner {
+  padding: 30vw 10vw !important;
+  width: 100vw;
+  height: 60vh;
+}
+
+.slogan {
+
+  font-size: 6rem;
+  flex-direction: column;
+  font-family: 'Source Serif Pro';
+  font-weight: 600;
+}
+
