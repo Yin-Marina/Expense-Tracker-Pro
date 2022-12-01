@@ -21,6 +21,8 @@ if (!isset($_SESSION['loggedin'])) {
 				<h1>Website Title</h1>
 				<a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
 				<a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+				<a href="report.html"><i class="fas fa-sign-out-alt"></i>report</a>
+				<a href="input.html"><i class="fas fa-info-circle">input</a>
 			</div>
 		</nav>
 		<div class="content">
