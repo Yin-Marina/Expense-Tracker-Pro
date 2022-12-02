@@ -30,7 +30,6 @@
     <?php
       include("nav.php");
       require_once('php/database.php');
-      session_start();
 
       if(!isset($_GET['id'])) { //check if we get the id
         header("Location:  report.php");

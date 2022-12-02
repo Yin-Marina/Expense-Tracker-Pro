@@ -31,7 +31,6 @@
     <?php
       include("nav.php");
       require_once('php/database.php');
-      session_start();
 
       $query = '';
       $from = '';
