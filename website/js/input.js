@@ -1,6 +1,7 @@
 let dateInput=document.querySelector("#date");
 let amountInput=document.querySelector("#amount");
 
+
 let dateError=document.createElement('p');
 dateError.setAttribute("class","warning");
 document.querySelectorAll(".dateField")[0].append(dateError);
