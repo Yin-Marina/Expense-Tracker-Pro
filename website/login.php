@@ -9,7 +9,7 @@
   <title>Log In</title>
 
   <!-- Page specific stylesheet -->
-  <link rel="stylesheet" type="text/css" href="" />
+  <link rel="stylesheet" type="text/css" href="css/auth.css" />
 </head>
 
 <body>
