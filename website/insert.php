@@ -51,7 +51,7 @@ mysqli_close($connection);
 <body>
 
   <div class="container">
-    <form name="form" action="insert_process.phpa" method="post" onsubmit="return validate();">
+    <form name="form" action="insert_process.php" method="post" onsubmit="return validate();">
       <h1>Record Your Spending</h1>
       <div>
       <label for="select_type">Please select the Spending type:</label>
