@@ -31,6 +31,7 @@ mysqli_close($con);
 
   <!-- Page specific stylesheet -->
   <link rel="stylesheet" type="text/css" href="" />
+  <script src="js/input.js" defer></script>
 </head>
 
 <body>

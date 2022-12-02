@@ -2,12 +2,15 @@
 <html>
 
 <head>
+
 	<!-- Apply website universal header -->
 	<?php
     require_once "./php/header.php";
     ?>
     <title>Sign Up</title></script>
     <link rel="stylesheet" type="text/css" href="css/auth.css" />
+
+
 </head>
 
 <body>
