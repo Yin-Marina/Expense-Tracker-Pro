@@ -11,6 +11,13 @@ body {
   padding-right: 10% !important; 
   
 }
+
+ .navbar-nav li a:hover {
+	background-color: #444444;
+	transition: 0.7s all linear;
+	height: 100%;
+}
+
 .footer {
   padding-left: 10% !important;
   padding-right: 10% !important; 

@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+
   <title>Mutao Yin</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,6 +22,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
     integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
+
+
+
   <!-- Header/footer Stylesheet -->
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link rel="stylesheet" type="text/css" href="css/font-style.css" />
@@ -29,26 +32,73 @@
 
 
   <link rel="icon" href="favicon.ico" />
+
+  <!-- Bootstrap Latest JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"></script>
 </head>
 
 <body class="bg-light" id="index-body">
+
+  <nav class="navbar navbar-expand-xl bg-info">
+    <div class="container">
+
+      <a class="navbar-brand" href="#">
+        <span class="h2 text-light">Expense Tracker Pro</span>
+      </a>
+
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#n_bar"
+        aria-controls="navbarNavAltMarkup" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse bg-info px-5 py-5  justify-content-end" id="n_bar">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link text-light " href="./index.html">Home</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link text-light " href="login.html">Login</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link text-light " href="aboutUs.html">About us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
   <!--Nav bar-->
-  <nav class="outer-interface navbar navbar-expand-xl bg-info sticky-top px-5 py-5">
-    <a class="navbar-brand" href="#">
-      <span class="h2 text-light">Expense Tracker Pro</span>
-    </a>
-    <div class="collapse navbar-collapse d-flex justify-content-end ">
-      <ul class="navbar-nav mr-auto d-flex justify-content-end pull-right h4">
-        <li class="nav-item active">
-          <a class="nav-link text-light h3" href="./index.html">Home</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link text-light h3" href="login.html">Login</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link text-light h3" href="aboutUs.html">About us</a>
-        </li>
-      </ul>
+  <nav class="navbar navbar-expand-xl bg-info sticky-top px-5 py-5" role="navigation">
+    <div class="container">
+
+
+      <a class="navbar-brand" href="#">
+        <span class="h2 text-light">Expense Tracker Pro</span>
+      </a>
+
+      <button type="button" class="navbar-toggler ms-auto collapsed" data-bs-toggle="collapse"
+        data-bs-target="#navbar-collapse1" aria-controls="navbarNavAltMarkup" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="#navbar-collapse1">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link text-light " href="./index.html">Home</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link text-light " href="login.html">Login</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link text-light " href="aboutUs.html">About us</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 
@@ -60,7 +110,8 @@
     <h1 class="vertical-box display-1 p-2">Track your expense, anytime, everywhere</h1>
 
     <div class="p-2 d-flex justify-content-left">
-      <a class="button text-center text-light text-decoration-none" href="./signup.php" role="button"> <span class="h2">signup</span> </a>
+      <a class="button text-center text-light text-decoration-none" href="./signup.php" role="button"> <span
+          class="h2">signup</span> </a>
     </div>
 
 
@@ -68,10 +119,8 @@
     <footer class="footer fixed-bottom d-flex flex-row-reverse bg-info ">
       <p class="p-2 bd-highlight flex-end text-light">2022 Expense Tracker Pro</p>
     </footer>
-    <!-- Bootstrap Latest compiled and minified JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
-      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-      crossorigin="anonymous"></script>
+
+
 </body>
 
 </html>

@@ -68,13 +68,56 @@ $stmt3->close();
 
 <body class="loggedin bg-light">
 
+
+<!-- <nav class="navbar navbar-expand-xxl navbar-dark bg-dark" aria-label="Seventh navbar example">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Expand at xxl</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleXxl" aria-controls="navbarsExampleXxl" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleXxl">
+        <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownXxl" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownXxl">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form>
+          <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+        </form>
+      </div>
+    </div>
+  </nav> -->
+
+
 	<!--Nav bar-->
-	<nav class="outer-interface navbar navbar-expand-xl bg-info sticky-top px-5 py-5">
+	<nav class="navbar navbar-expand-xxl bg-info sticky-top px-5 py-5" aria-label="navbar">
+		<div class="container-fluid">
+		
+		
 		<a class="navbar-brand" href="#">
 			<span class="h2 text-light">
 				<p>Welcome back, <?= $firstName, ' ', $lastName ?>!</p>
 			</span>
 		</a>
+
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleXxl" aria-controls="navbarsExampleXxl" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+
 		<div class="collapse navbar-collapse d-flex justify-content-end ">
 			<ul class="navbar-nav mr-auto d-flex justify-content-end pull-right h4">
 				<li class="nav-item active">
@@ -93,6 +136,7 @@ $stmt3->close();
 					<a class="nav-link text-light h3" href="logout.php">Logout</a>
 				</li>
 			</ul>
+			</div>
 		</div>
 	</nav>
 
