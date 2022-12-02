@@ -2,6 +2,7 @@
   include "header.php" ;
 ?>
     <title>Report Delete</title>
+    <link rel="stylesheet" type="text/css" href="css/report.css">
   </head>
   <body>
     <?php
@@ -30,7 +31,7 @@
     <div class="container">
       <a href="report.php">&laquo; Back to List</a>
       <div>
-        <h1>Delete Page</h1>
+        <h1>Delete Transaction</h1>
         <p>Are you sure you want to delete this transaction?</p>
         <p><?php echo "Date: " . $result['date'] ?></p>
         <p><?php echo "Amount: " . $result['amount'] ?></p>

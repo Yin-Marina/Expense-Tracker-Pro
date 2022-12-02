@@ -2,6 +2,7 @@
   include "header.php" ;
 ?>
     <title>Report Edit</title>
+    <link rel="stylesheet" type="text/css" href="css/report.css">
   </head>
   <body>
     <?php

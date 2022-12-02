@@ -50,8 +50,8 @@
       $results = mysqli_query($db, $sql);
     ?>
 
+  <div class="container">
     <form method="get" action="report.php">
-      <div class="container">
         <div class="searchWrap">
           <div class="search">
             <input type="text" class="searchInput" placeholder="Search for expenses" name="query" value="<?php echo $query; ?>">
@@ -88,8 +88,8 @@
             </div>
           </div>
         </div>
-      </div>
-    </form>
+      </form>
+    </div>
 
     <div class="container">
       <table>
