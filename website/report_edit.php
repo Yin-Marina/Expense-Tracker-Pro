@@ -1,12 +1,38 @@
 <?php
-  include "header.php" ;
+// start the session
+session_start();
+// If the user is not logged in redirect to the login page.
+if (!isset($_SESSION['loggedin'])) {
+  header('Location: index.html');
+  exit;
+}
+
+require "./php/connection.php";
+
+
+
+mysqli_close($con);
 ?>
-    <title>Report Edit</title>
-    <link rel="stylesheet" type="text/css" href="css/report.css">
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Apply website universal header -->
+  <?php
+  require_once "./php/header.php";
+  ?>
+
+  <title>input</title>
+
+  <!-- Page specific stylesheet -->
+  <link rel="stylesheet" type="text/css" href="./css/report.css" />
+
+  <!-- Page specific javascript for validate -->
+  <script type="text/javascript" src="js/report.js" defer></script>
+</head>
   <body>
     <?php
-      include("nav.php");
+      include("./php/nav_inner.php");
       require_once('php/database.php');
 
       if (!isset($_GET['id'])) { //check if we get the id
@@ -70,5 +96,9 @@
         </form>
       </div>
     </div>
+    <!-- footer -->
+  <?php
+  require "./php/footer_outer.php"
+    ?>
   </body>
 </html>
