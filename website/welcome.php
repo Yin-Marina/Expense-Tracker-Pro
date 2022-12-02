@@ -127,7 +127,7 @@ $stmt3->close();
 					<a class="nav-link text-light h3" href="profile.php">Profile</a>
 				</li>
 				<li class="nav-item active">
-					<a class="nav-link text-light h3" href="insert.html">New Spending</a>
+					<a class="nav-link text-light h3" href="insert.php">New Spending</a>
 				</li>
 				<li class="nav-item active">
 					<a class="nav-link text-light h3" href="report.php">View Report</a>

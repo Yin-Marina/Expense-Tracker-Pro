@@ -1,5 +1,4 @@
 <?php
-session_start();
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
 $connect= mysqli_connect("localhost", "root", "", "expense_tracker_pro");
@@ -11,17 +10,16 @@ if(mysqli_connect_errno()){
  
 
 
-$grocery_type = intval($_POST['select_type']);
-$spending_date = $_POST['spending_date'];
-$add_amount = $_POST['add_amount'];
-$add_note = $_POST['add_note'];
-$userid = $_SESSION['id'];
+$firstName = $_POST['first_name'];
+$lastName = $_POST['last_name'];
+$email = $_POST['email'];
+$password = $_POST['password'];
  
 // Attempt insert query execution
-$sql = "INSERT INTO transactions (userId, date, amount, typeId, notes) VALUES ('$userid', '$spending_date', '$add_amount', '$grocery_type', '$add_note')";
+$sql = "INSERT INTO users (firstName, lastName, email, password) VALUES ('$firstName', '$lastName', '$email', '$password')";
 if(mysqli_query($connect, $sql)){
     echo "Records added successfully.";
-    header('Location: insert.php');
+    header('Location: login.html');
 } else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($connect);
 }
