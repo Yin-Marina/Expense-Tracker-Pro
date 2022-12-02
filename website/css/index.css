@@ -1,0 +1,6 @@
+.vertical-box {
+    min-height:20%;
+    min-height:20vh;
+    display: flex;
+    justify-content: center;
+}

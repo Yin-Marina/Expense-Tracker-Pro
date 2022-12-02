@@ -1,9 +1,12 @@
+<<<<<<< Updated upstream
 /* General Site styling: General */
 :root {
   --dark: #422f01;
   --shade: #9f8950;
   --bright: #ffdf92;
   --white: #ffffff;
+=======
+>>>>>>> Stashed changes
 
 }
 
@@ -18,6 +21,7 @@
   
 }
 
+<<<<<<< Updated upstream
 body {
   color:var(--dark);
   background-color: var(--bright);
@@ -39,6 +43,17 @@ a:hover {
 
 /* General Site styling: Navbar */
 
+=======
+
+body *{
+  color: var(--bs-dark);
+  
+}
+
+
+
+/* Outer Interface: Header */
+>>>>>>> Stashed changes
 .navbar {
   padding: 10vh 10vw 0 10vw;
 }
@@ -178,6 +193,7 @@ footer div {
   flex-direction: column;
   justify-content: space-between;
 }
+<<<<<<< Updated upstream
 
 .down-box > div {
   flex-direction: column;
@@ -196,6 +212,11 @@ footer div {
   height: auto;
   
   
+=======
+.footer {
+  padding-left: 10% !important;
+  padding-right: 10% !important; 
+>>>>>>> Stashed changes
 }
 .title-with-3-columns h2, h3{
   font-family: 'Source Serif Pro';
