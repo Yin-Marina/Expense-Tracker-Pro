@@ -4,3 +4,7 @@
     display: flex;
     justify-content: center;
 }
+
+div > [href="./signup.php"] {
+    max-width: 15%;
+}
