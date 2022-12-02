@@ -141,7 +141,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
   <!--Nav bar-->
-  <nav class="outer-interface navbar navbar-expand-xl bg-info fixed-top px-5 py-5">
+  <nav class="outer-interface navbar navbar-expand-xl bg-info sticky-top px-5 py-5">
     <a class="navbar-brand" href="#">
       <span class="h2 text-light">Expense Tracker Pro</span>
     </a>

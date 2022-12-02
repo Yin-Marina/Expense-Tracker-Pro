@@ -6,6 +6,36 @@ if (!isset($_SESSION['loggedin'])) {
 	header('Location: index.html');
 	exit;
 }
+
+
+require "./php/connection.php";
+$stmt = $con->prepare('SELECT firstName, lastName, password, email FROM users WHERE id = ?');
+// In this case we can use the account ID to get the account info.
+$stmt->bind_param('i', $_SESSION['id']);
+$stmt->execute();
+$stmt->bind_result($firstName, $lastName, $password, $email);
+$stmt->fetch();
+$stmt->close();
+
+
+// We don't have the password or email info stored in sessions so instead we can get the results from the database.
+$stmt2 = $con->prepare('SELECT count(*) FROM transactions WHERE userId = ?');
+// In this case we can use the account ID to get the account info.
+$stmt2->bind_param('i', $_SESSION['id']);
+$stmt2->execute();
+$stmt2->bind_result($transactions_num);
+$stmt2->fetch();
+$stmt2->close();
+
+$stmt3 = $con->prepare('SELECT sum(amount) FROM transactions WHERE userId = ?');
+// In this case we can use the account ID to get the account info.
+$stmt3->bind_param('i', $_SESSION['id']);
+$stmt3->execute();
+$stmt3->bind_result($total_spending);
+$stmt3->fetch();
+
+$stmt3->close();
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,8 +52,8 @@ if (!isset($_SESSION['loggedin'])) {
 
 	<!-- Bootstrap Latest compiled and minified CSS -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
-	
+		integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+
 
 	<!--  Bootstrap Optional theme -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
@@ -39,10 +69,10 @@ if (!isset($_SESSION['loggedin'])) {
 <body class="loggedin bg-light">
 
 	<!--Nav bar-->
-	<nav class="outer-interface navbar navbar-expand-xl bg-info fixed-top px-5 py-5">
+	<nav class="outer-interface navbar navbar-expand-xl bg-info sticky-top px-5 py-5">
 		<a class="navbar-brand" href="#">
 			<span class="h2 text-light">
-				<p>Welcome back, <?= $_SESSION['name'] ?>!</p>
+				<p>Welcome back, <?= $firstName, ' ', $lastName ?>!</p>
 			</span>
 		</a>
 		<div class="collapse navbar-collapse d-flex justify-content-end ">
@@ -66,6 +96,29 @@ if (!isset($_SESSION['loggedin'])) {
 		</div>
 	</nav>
 
+	<div class="card">
+		<h5 class="card-header">The number of Transactions you recorded:</h5>
+		<div class="card-body">
+			<h1>
+			<?php
+            echo $transactions_num;
+            ?>
+			</h1>
+		</div>
+
+	</div>
+
+	<div class="card">
+		<h5 class="card-header">Total Spending</h5>
+		<div class="card-body">
+		<h1>
+			<?php
+            echo round($total_spending, 2);
+            ?>
+			</h1>
+		</div>
+
+	</div>
 	<!--Footer-->
 	<footer class="footer fixed-bottom d-flex flex-row-reverse bg-info ">
 		<p class="p-2 bd-highlight flex-end text-light">2022 Expense Tracker Pro</p>
