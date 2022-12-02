@@ -3,7 +3,7 @@
 
 // If the user is not logged in redirect to the login page...
 if (!isset($_SESSION['loggedin'])) {
-	header('Location: index.html');
+	header('Location: index.php');
 	exit;
 }
 
@@ -41,10 +41,10 @@ $stmt0->close();
                     <a class="nav-link text-light " href="./profile.php">Profile</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link text-light " href="./report">View Report</a>
+                    <a class="nav-link text-light " href="./report.php">View Report</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link text-light " href="./insert">New Spending</a>
+                    <a class="nav-link text-light " href="./insert.php">New Spending</a>
                 </li>
                 <li class="nav-item ">
                     <a class="nav-link text-light " href="./logout.php">Logout</a>

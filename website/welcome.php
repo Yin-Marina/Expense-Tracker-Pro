@@ -7,6 +7,8 @@ if (!isset($_SESSION['loggedin'])) {
 	exit;
 }
 
+require "./php/connection.php";
+
 // Query the Database for number of transactions that need to be displayed in the dashboard.
 $stmt1 = $con->prepare('SELECT count(*) FROM transactions WHERE userId = ?');
 $stmt1->bind_param('i', $_SESSION['id']);
