@@ -45,10 +45,10 @@ $stmt->close();
 
 <body class="loggedin">
 	<!--Nav bar-->
-	<nav class="outer-interface navbar navbar-expand-xl bg-info fixed-top px-5 py-5">
+	<nav class="outer-interface navbar navbar-expand-xl bg-info Sticky-top px-5 py-5">
 		<a class="navbar-brand" href="#">
 			<span class="h2 text-light">
-				<p>Welcome back, <?= $_SESSION['name'] ?>!</p>
+				<p>Welcome back, <?= $firstName, " ", $lastName ?>!</p>
 			</span>
 		</a>
 		<div class="collapse navbar-collapse d-flex justify-content-end ">
@@ -63,7 +63,7 @@ $stmt->close();
 					<a class="nav-link text-light h3" href="insert.html">New Spending</a>
 				</li>
 				<li class="nav-item active">
-					<a class="nav-link text-light h3" href="report.html">View Report</a>
+					<a class="nav-link text-light h3" href="report.php">View Report</a>
 				</li>
 				<li class="nav-item active">
 					<a class="nav-link text-light h3" href="logout.php">Logout</a>
@@ -73,10 +73,10 @@ $stmt->close();
 	</nav>
 
 	
-	<div class="">
-		<h2>Profile Page</h2>
-		<div>
-			<p>Your account details are below:</p>
+	<div class="card">
+		<h2 class="card-header">Account Detail:</h2>
+		<div class="card-body">
+			<p class="card-title"></p>
 			<table>
 				<tr>
 					<td>Username:</td>
