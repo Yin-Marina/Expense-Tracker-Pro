@@ -5,53 +5,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mutao Yin</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
-        rel="stylesheet" />
-
-    <!-- Header/footer Stylesheet -->
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="css/font-style.css" />
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>About us</title>
     <!-- Bootstrap Latest compiled and minified CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
 
-    <!--  Bootstrap Optional theme -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
-        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <!--  Bootstrap Optional theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
+  <!-- Header/footer Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
 
+  <!-- Page specific stylesheet -->
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
 
+  <link rel="icon" href="favicon.ico" />
 
-    <link rel="icon" href="favicon.ico" />
+  <!-- Bootstrap Latest JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
 
+   
     <!--Nav bar-->
-    <nav class="outer-interface navbar navbar-expand-xl bg-info sticky-top px-5 py-5">
-        <a class="navbar-brand" href="#">
-            <span class="h2 text-light">Expense Tracker Pro</span>
-        </a>
-        <div class="collapse navbar-collapse d-flex justify-content-end ">
-            <ul class="navbar-nav mr-auto d-flex justify-content-end pull-right h4">
-                <li class="nav-item active">
-                    <a class="nav-link text-light h3" href="./index.html">Home</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link text-light h3" href="login.html">Login</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link text-light h3" href="aboutUs.html">About us</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
+  <?php
+  require "./php/nav_outer.php"
+    ?>
 
     <!--Company Intro-->
     <div class="company-intro container">
@@ -169,10 +156,11 @@
             </div>
         </div>
     </div>
-
-    <footer class="footer d-flex flex-row-reverse bg-info ">
-        <p class="p-2 bd-highlight flex-end text-light">2022 Expense Tracker Pro</p>
-    </footer>
+     <!-- footer -->
+  <?php
+  require "./php/footer_outer.php"
+    ?>
+   
 </body>
 
 </html>

@@ -6,5 +6,6 @@
 }
 
 div > [href="./signup.php"] {
+    
     max-width: 10em;
 }

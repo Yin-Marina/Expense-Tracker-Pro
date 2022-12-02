@@ -12,7 +12,7 @@ body {
   
 }
 
- .navbar-nav li a:hover {
+ .navbar-collapse li a:hover {
 	background-color: #444444;
 	transition: 0.7s all linear;
 	height: 100%;
