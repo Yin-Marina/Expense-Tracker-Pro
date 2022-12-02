@@ -30,7 +30,7 @@ mysqli_close($con);
   <title>input</title>
 
   <!-- Page specific stylesheet -->
-  <link rel="stylesheet" type="text/css" href="" />
+  <link rel="stylesheet" type="text/css" href="./css/input.css" />
   <script src="js/input.js" defer></script>
 </head>
 

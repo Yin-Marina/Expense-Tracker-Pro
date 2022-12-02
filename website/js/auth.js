@@ -10,6 +10,9 @@ const emailError = document.getElementById("emailError");
 const password = document.getElementById("password");
 const passwordError = document.getElementById("passwordError");
 
+const password2 = document.getElementById("confirm_password");
+const confirmPasswordError = document.getElementById("confirmPasswordError");
+
 const setErrorMessage = (element, message, display) => {
   element.innerHTML = message;
   element.style.display = display;
@@ -75,12 +78,28 @@ const validatePassword = (password) => {
   return true;
 }
 
+const validatePassword2 = (password, password2) => {
+  let message = '';
+  if (password === password2) {
+    message = "Please enter a password";
+    setErrorMessage(passwordError, message, 'none');
+    return true;
+  }else {
+    message = "The passwords must match";
+    setErrorMessage(passwordError, message, 'block');
+    return false;
+  }
+    
+  
+
+  }
 // add event listeners
 const fields = [
   { node: firstName, validateFunc: validateFirstName },
   { node: lastName, validateFunc: validateLastName },
   { node: email, validateFunc: validateEmail },
-  { node: password, validateFunc: validatePassword }
+  { node: password, validateFunc: validatePassword },
+  { node: password, password2, validateFunc: validatePassword2 }
 ];
 fields.forEach(field => {
   if (field.node) {

@@ -1,12 +1,18 @@
-<?php
-  include "header.php" ;
-?>
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Apply website universal header -->
+	<?php
+    require_once "./php/header.php";
+    ?>
     <title>Report Delete</title>
     <link rel="stylesheet" type="text/css" href="css/report.css">
   </head>
   <body>
     <?php
-      include("nav.php");
+      include("./php/nav_outer.php");
       require_once('php/database.php');
 
       if (!isset($_GET['id'])) {
@@ -45,5 +51,10 @@
         </form>
       </div>
     </div>
+    <!-- footer -->
+  <?php
+  require "./php/footer_outer.php"
+    ?>
+
   </body>
 </html>
