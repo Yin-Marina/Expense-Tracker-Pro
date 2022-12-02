@@ -9,7 +9,7 @@
     ?>
     <title>Sign Up</title></script>
     <link rel="stylesheet" type="text/css" href="css/auth.css" />
-
+    <script src="js/auth.js" defer></script>
 
 </head>
 
