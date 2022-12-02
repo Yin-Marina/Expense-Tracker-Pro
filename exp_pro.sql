@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `exp_pro`
+-- Database: `expense_tracker_pro`
 --
 
 -- --------------------------------------------------------
@@ -33,14 +33,14 @@ CREATE TABLE `transactions` (
   `date` date DEFAULT NULL,
   `amount` float NOT NULL,
   `typeId` int(11) NOT NULL,
-  `Notes` varchar(100) NOT NULL
+  `notes` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `transactions`
 --
 
-INSERT INTO `transactions` (`id`, `userId`, `date`, `amount`, `typeId`, `Notes`) VALUES
+INSERT INTO `transactions` (`id`, `userId`, `date`, `amount`, `typeId`, `notes`) VALUES
 (1, 1, '2022-11-01', 10.5, 1, 'Food'),
 (2, 1, '2022-11-03', 20.6, 2, 'Games'),
 (3, 1, '2022-11-04', 2500, 3, 'property tax'),
