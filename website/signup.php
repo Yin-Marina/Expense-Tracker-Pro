@@ -2,8 +2,6 @@
 // Include config file
 require_once "./php/connection.php";
 
-// Define variables and initialize with empty values
-$first_name = $last_name = $email = $password = $confirm_password = "";
 
 // Processing form data via $_POST
 $first_name = $_GET['first_name'];
