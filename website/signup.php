@@ -24,7 +24,7 @@
 
 <body>
   <!--Nav bar-->
-  <nav class="outer-interface navbar navbar-expand-xl bg-info fixed-top px-5 py-5">
+  <nav class="outer-interface navbar navbar-expand-xl bg-info px-5 py-5">
     <a class="navbar-brand" href="#">
       <span class="h2 text-light">Expense Tracker Pro</span>
     </a>
@@ -45,12 +45,6 @@
 
   <div class="container">
     <div class="wrap">
-      <p></p>
-      <p></p>
-      <p></p>
-      <p></p>
-      <p></p>
-      <p></p>
       <h1>Sign Up</h1>
       <form action="signup_process.php" method="POST" onsubmit="return validateForm();">
         <div class="field">
@@ -87,9 +81,9 @@
     </div>
   </div>
   <!--Footer-->
-<!--  <footer class="footer fixed-bottom d-flex flex-row-reverse bg-info ">
+ <footer class="footer d-flex flex-row-reverse bg-info ">
     <p class="p-2 bd-highlight flex-end text-light">2022 Expense Tracker Pro</p>
-  </footer> -->
+  </footer>
   <!-- Bootstrap Latest compiled and minified JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
     integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
