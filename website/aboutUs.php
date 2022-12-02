@@ -72,8 +72,8 @@
 
     <!--Testimonials-->
     <div class="testimonials container text-center gx-5 gy-5">
-        <div class="row ">
-            <h2 class="col ">Testimonials</h2>
+        <div class="row">
+            <h2 class="col">Testimonials</h2>
         </div>
         <div class="row justify-content-around">
 

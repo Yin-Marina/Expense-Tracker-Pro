@@ -82,7 +82,7 @@ mysqli_close($con);
         <div class="search">
           <input type="text" class="searchInput" placeholder="Search for expenses" name="query"
             value="<?php echo $query; ?>">
-          <button class="searchButton" type="submit" name="submit">Search</button>
+          
         </div>
       </div>
       <div class="filters">
@@ -115,6 +115,7 @@ mysqli_close($con);
               <option value="desc" <?php echo $sortAmount === 'desc' ? 'selected' : ''; ?>>Highest to lowest</option>
             </select>
           </div>
+          <button class="searchButton" type="submit" name="submit">Search</button>
         </div>
       </div>
     </form>
