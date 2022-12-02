@@ -19,7 +19,7 @@ $password = $_POST['password'];
 $sql = "INSERT INTO users (firstName, lastName, email, password) VALUES ('$firstName', '$lastName', '$email', '$password')";
 if(mysqli_query($connect, $sql)){
     echo "Records added successfully.";
-    header('Location: login.html');
+    header('Location: login.php');
 } else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($connect);
 }
