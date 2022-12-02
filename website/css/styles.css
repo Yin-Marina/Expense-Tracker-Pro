@@ -1,19 +1,14 @@
-/* Define color pallete */
 
-
-body {
-  color: var(--bs-dark)
-}
-
-/* Outer Interface: Header */
 .navbar {
   padding-left: 10% !important;
   padding-right: 10% !important; 
   
 }
-.footer {
 
-  
+.footer {
+  padding-left: 10% !important;
+  padding-right: 10% !important; 
+
 }
 
 
