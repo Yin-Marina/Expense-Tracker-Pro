@@ -57,7 +57,7 @@ if (!isset($_SESSION['loggedin'])) {
 					<a class="nav-link text-light h3" href="insert.html">New Spending</a>
 				</li>
 				<li class="nav-item active">
-					<a class="nav-link text-light h3" href="report.html">View Report</a>
+					<a class="nav-link text-light h3" href="report.php">View Report</a>
 				</li>
 				<li class="nav-item active">
 					<a class="nav-link text-light h3" href="logout.php">Logout</a>
