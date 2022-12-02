@@ -18,7 +18,7 @@ $add_note = $_POST['add_note'];
 $userid = $_SESSION['id'];
  
 // Attempt insert query execution
-$sql = "INSERT INTO transactions (userId, date, amount, typeId, Notes) VALUES ('$userid', '$spending_date', '$add_amount', '$grocery_type', '$add_note')";
+$sql = "INSERT INTO transactions (userId, date, amount, typeId, notes) VALUES ('$userid', '$spending_date', '$add_amount', '$grocery_type', '$add_note')";
 if(mysqli_query($connect, $sql)){
     echo "Records added successfully.";
     header('Location: insert.php');
