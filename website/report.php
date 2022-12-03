@@ -75,7 +75,6 @@ if (!isset($_SESSION['loggedin'])) {
           <div class="search">
             <input type="text" class="searchInput" placeholder="Search for expenses" name="query"
               value="<?php echo $query; ?>">
-            <button class="searchButton" type="submit" name="submit">Search</button>
           </div>
         </div>
         <div class="filters">
@@ -109,6 +108,7 @@ if (!isset($_SESSION['loggedin'])) {
               </select>
             </div>
           </div>
+          <button class="searchButton" type="submit" name="submit">Search</button>
         </div>
       </form>
     </div>
