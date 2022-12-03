@@ -3,15 +3,9 @@
 session_start();
 // If the user is not logged in redirect to the login page.
 if (!isset($_SESSION['loggedin'])) {
-  header('Location: index.html');
+  header('Location: index.php');
   exit;
 }
-
-require "./php/connection.php";
-
-
-
-mysqli_close($con);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,43 +16,38 @@ mysqli_close($con);
   require_once "./php/header.php";
   ?>
 
-  <title>input</title>
+  <title>Report Edit</title>
 
   <!-- Page specific stylesheet -->
   <link rel="stylesheet" type="text/css" href="./css/report.css" />
-
-  <!-- Page specific javascript for validate -->
-  <script type="text/javascript" src="js/report.js" defer></script>
 </head>
   <body>
     <?php
-      include("./php/nav_inner.php");
-      require_once('php/database.php');
+    include("./php/nav_inner.php");
 
-      if (!isset($_GET['id'])) { //check if we get the id
-        header("Location:  report.php");
-      }
-      $id = $_GET['id'];
-      $db = db_connect();
-      if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $date = $_POST['date']; 
-        $amount= $_POST['amount'];
-        $typeId= $_POST['typeId'];
-        $notes= $_POST['notes'];
-        // update the table with new information
-        $sql="UPDATE transactions set date = '$date' , amount= '$amount' , typeId= '$typeId' , notes= '$notes' where id = '$id' ";
-        $result = mysqli_query($db, $sql);
-        // redirect to report page
-        header("Location: report.php");
-      } else {
-        $sql = "SELECT transactions.id, date, amount, notes, types.id as typeId FROM transactions"
-            . " join types on transactions.typeId = types.id"
-            . " and transactions.id = $id";
-        $result_set = mysqli_query($db, $sql);
-        $result = mysqli_fetch_assoc($result_set);
-      }
+    if (!isset($_GET['id'])) { //check if we get the id
+      header("Location:  report.php");
+    }
+    $id = $_GET['id'];
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+      $date = $_POST['date']; 
+      $amount= $_POST['amount'];
+      $typeId= $_POST['typeId'];
+      $notes= $_POST['notes'];
+      // update the table with new information
+      $sql="UPDATE transactions set date = '$date' , amount= '$amount' , typeId= '$typeId' , notes= '$notes' where id = '$id' ";
+      $result = mysqli_query($con, $sql);
+      // redirect to report page
+      header("Location: report.php");
+    } else {
+      $sql = "SELECT transactions.id, date, amount, notes, types.id as typeId FROM transactions"
+          . " join types on transactions.typeId = types.id"
+          . " and transactions.id = $id";
+      $result_set = mysqli_query($con, $sql);
+      $result = mysqli_fetch_assoc($result_set);
+    }
     ?>
-    <div class="container">
+    <div class="container wrap">
       <a href="report.php">&laquo; Back to List</a>
 
       <div>
@@ -97,8 +86,8 @@ mysqli_close($con);
       </div>
     </div>
     <!-- footer -->
-  <?php
-  require "./php/footer_outer.php"
+    <?php
+    require "./php/footer_outer.php"
     ?>
   </body>
 </html>
