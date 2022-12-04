@@ -3,15 +3,9 @@
 session_start();
 // If the user is not logged in redirect to the login page.
 if (!isset($_SESSION['loggedin'])) {
-  header('Location: index.html');
+  header('Location: index.php');
   exit;
 }
-
-require "./php/connection.php";
-
-
-
-mysqli_close($con);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,13 +16,10 @@ mysqli_close($con);
   require_once "./php/header.php";
   ?>
 
-  <title>input</title>
+  <title>Report Edit</title>
 
   <!-- Page specific stylesheet -->
   <link rel="stylesheet" type="text/css" href="./css/report.css" />
-
-  <!-- Page specific javascript for validate -->
-  <script type="text/javascript" src="js/report.js" defer></script>
 </head>
 
 <body>

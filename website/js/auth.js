@@ -1,7 +1,7 @@
-const firstName = document.getElementById("firstName");
+const firstName = document.getElementById("first_name");
 const firstNameError = document.getElementById("firstNameError");
 
-const lastName = document.getElementById("lastName");
+const lastName = document.getElementById("last_name");
 const lastNameError = document.getElementById("lastNameError");
 
 const email = document.getElementById("email");
@@ -78,28 +78,26 @@ const validatePassword = (password) => {
   return true;
 }
 
-const validatePassword2 = (password, password2) => {
+const validatePassword2 = (value) => {
+  const pass = password.value;
   let message = '';
-  if (password === password2) {
-    message = "Please enter a password";
-    setErrorMessage(passwordError, message, 'none');
-    return true;
-  } else {
+  if (!value || pass !== value) {
     message = "The passwords must match";
-    setErrorMessage(passwordError, message, 'block');
+    setErrorMessage(confirmPasswordError, message, "block");
     return false;
   }
 
-
-
+  setErrorMessage(confirmPasswordError, message, "none");
+  return true;
 }
+
 // add event listeners
 const fields = [
   { node: firstName, validateFunc: validateFirstName },
   { node: lastName, validateFunc: validateLastName },
   { node: email, validateFunc: validateEmail },
   { node: password, validateFunc: validatePassword },
-  { node: password, password2, validateFunc: validatePassword2 }
+  { node: password2, validateFunc: validatePassword2 }
 ];
 fields.forEach(field => {
   if (field.node) {
@@ -107,7 +105,7 @@ fields.forEach(field => {
       field.validateFunc(field.node.value);
     });
   }
-})
+});
 
 const validateForm = () => {
   let isValid = true;

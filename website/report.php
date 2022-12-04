@@ -3,15 +3,9 @@
 session_start();
 // If the user is not logged in redirect to the login page.
 if (!isset($_SESSION['loggedin'])) {
-  header('Location: index.html');
+  header('Location: index.php');
   exit;
 }
-
-require "./php/connection.php";
-
-
-
-mysqli_close($con);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +28,6 @@ mysqli_close($con);
 <body>
   <?php
   include("./php/nav_inner.php");
-  require_once('php/database.php');
 
   $query = '';
   $from = '';
@@ -42,7 +35,6 @@ mysqli_close($con);
   $sortType = '';
   $sortAmount = '';
 
-  $db = db_connect();
   $sql = "SELECT transactions.id, date, amount, notes, name FROM transactions"
     . " join types on transactions.typeId = types.id and transactions.userId = " . $_SESSION['id'];
   if (isset($_GET['submit'])) {
@@ -53,8 +45,8 @@ mysqli_close($con);
     $sortAmount = $_GET['sortAmount'];
 
     if (!empty($query)) {
-      $sql .= " and transactions.notes like '%$query%'"
-        . " and types.name like '%$query%'";
+      $sql .= " and (transactions.notes like '%$query%'"
+        . " or types.name like '%$query%')";
     }
     if (!empty($from)) {
       $sql .= " and transactions.date >= '$from'";
@@ -73,7 +65,7 @@ mysqli_close($con);
       $sql .= " order by " . implode(', ', $sorts);
     }
   }
-  $results = mysqli_query($db, $sql);
+  $results = mysqli_query($con, $sql);
   ?>
 
   <div class="container">
@@ -117,44 +109,44 @@ mysqli_close($con);
           </div>
           <button class="searchButton" type="submit" name="submit">Search</button>
         </div>
-      </div>
-    </form>
-  </div>
+      </form>
+    </div>
 
-  <div class="container">
-    <table>
-      <tr>
-        <th>Date</th>
-        <th>Amount</th>
-        <th>Type</th>
-        <th>Memo</th>
-        <th>&nbsp</th>
-        <th>&nbsp</th>
-      </tr>
-      <?php while ($row = mysqli_fetch_assoc($results)) { ?>
-      <tr>
-        <td>
-          <?php echo $row['date'] ?>
-        </td>
-        <td>$
-          <?php echo $row['amount'] ?>
-        </td>
-        <td>
-          <?php echo $row['name'] ?>
-        </td>
-        <td>
-          <?php echo $row['notes'] ?>
-        </td>
-        <td><a href="<?php echo "report_edit.php?id=" . $row['id']; ?>">Edit</a></td>
-        <td><a href="<?php echo "report_delete.php?id=" . $row['id']; ?>">delete</a></td>
-      </tr>
-      <?php } ?>
-    </table>
+    <div class="container">
+      <table>
+        <tr>
+          <th>Date</th>
+          <th>Amount</th>
+          <th>Type</th>
+          <th>Memo</th>
+          <th>&nbsp</th>
+          <th>&nbsp</th>
+        </tr>
+        <?php while ($row = mysqli_fetch_assoc($results)) { ?>
+        <tr>
+          <td>
+            <?php echo $row['date'] ?>
+          </td>
+          <td>$
+            <?php echo $row['amount'] ?>
+          </td>
+          <td>
+            <?php echo $row['name'] ?>
+          </td>
+          <td>
+            <?php echo $row['notes'] ?>
+          </td>
+          <td><a href="<?php echo "report_edit.php?id=" . $row['id']; ?>">Edit</a></td>
+          <td><a href="<?php echo "report_delete.php?id=" . $row['id']; ?>">delete</a></td>
+        </tr>
+        <?php } ?>
+      </table>
+    </div>
   </div>
   <!-- footer -->
   <?php
   require "./php/footer_outer.php"
-    ?>
+  ?>
 </body>
 
 </html>
