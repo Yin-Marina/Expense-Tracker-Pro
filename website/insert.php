@@ -3,8 +3,8 @@
 session_start();
 // If the user is not logged in redirect to the login page.
 if (!isset($_SESSION['loggedin'])) {
-	header('Location: index.html');
-	exit;
+  header('Location: index.html');
+  exit;
 }
 
 require "./php/connection.php";
@@ -26,7 +26,7 @@ mysqli_close($con);
   <?php
   require_once "./php/header.php";
   ?>
-    
+
   <title>input</title>
 
   <!-- Page specific stylesheet -->
@@ -72,7 +72,7 @@ mysqli_close($con);
   <!-- footer -->
   <?php
   require "./php/footer_outer.php"
-  ?>
+    ?>
 
 
 </body>

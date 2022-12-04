@@ -82,7 +82,7 @@ mysqli_close($con);
         <div class="search">
           <input type="text" class="searchInput" placeholder="Search for expenses" name="query"
             value="<?php echo $query; ?>">
-          
+
         </div>
       </div>
       <div class="filters">
@@ -103,16 +103,16 @@ mysqli_close($con);
             <label for="sortType">Sort type by:</label>
             <select name="sortType" id="sortType">
               <option value="" <?php echo empty($sortType) ? 'selected' : ''; ?>>---</option>
-              <option value="asc" <?php echo $sortType === 'asc' ? 'selected' : ''; ?>>Ascending order</option>
-              <option value="desc" <?php echo $sortType === 'desc' ? 'selected' : ''; ?>>Descending order</option>
+              <option value="asc" <?php echo $sortType==='asc' ? 'selected' : ''; ?>>Ascending order</option>
+              <option value="desc" <?php echo $sortType==='desc' ? 'selected' : ''; ?>>Descending order</option>
             </select>
           </div>
           <div class="sort">
             <label for="sortAmount">Sort amount by:</label>
             <select name="sortAmount" id="sortAmount">
               <option value="" <?php echo empty($sortAmount) ? 'selected' : ''; ?>>---</option>
-              <option value="asc" <?php echo $sortAmount === 'asc' ? 'selected' : ''; ?>>Lowest to highest</option>
-              <option value="desc" <?php echo $sortAmount === 'desc' ? 'selected' : ''; ?>>Highest to lowest</option>
+              <option value="asc" <?php echo $sortAmount==='asc' ? 'selected' : ''; ?>>Lowest to highest</option>
+              <option value="desc" <?php echo $sortAmount==='desc' ? 'selected' : ''; ?>>Highest to lowest</option>
             </select>
           </div>
           <button class="searchButton" type="submit" name="submit">Search</button>

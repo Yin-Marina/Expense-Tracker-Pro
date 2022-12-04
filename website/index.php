@@ -5,10 +5,10 @@
 <html>
 
 <head>
-	<!-- Apply website universal header -->
-	<?php
-    require_once "./php/header.php";
-    ?>
+  <!-- Apply website universal header -->
+  <?php
+  require_once "./php/header.php";
+  ?>
 
   <title>Welcome to ExpenseTrackerPro</title>
 

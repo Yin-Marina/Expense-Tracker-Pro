@@ -24,8 +24,8 @@ $stmt->close();
 <head>
 	<!-- Apply website universal header -->
 	<?php
-  require_once "./php/header.php";
-  ?>
+    require_once "./php/header.php";
+    ?>
 
 	<title>Profile Page</title>
 	<!-- Page specific stylesheet -->
@@ -37,7 +37,7 @@ $stmt->close();
 	<?php
     require "./php/nav_inner.php"
     	?>
-	
+
 	<div class="card">
 		<h2 class="card-header">Account Detail:</h2>
 		<div class="card-body">

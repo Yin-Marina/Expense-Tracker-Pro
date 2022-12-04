@@ -1,46 +1,50 @@
-let dateInput=document.querySelector("#date");
-let amountInput=document.querySelector("#amount");
+let dateInput = document.querySelector("#date");
+let amountInput = document.querySelector("#amount");
 
 
-let dateError=document.createElement('p');
-dateError.setAttribute("class","warning");
+let dateError = document.createElement('p');
+dateError.setAttribute("class", "warning");
 document.querySelectorAll(".dateField")[0].append(dateError);
 
-let amountError=document.createElement('p');
-amountError.setAttribute("class","warning");
+let amountError = document.createElement('p');
+amountError.setAttribute("class", "warning");
 document.querySelectorAll(".amountField")[0].append(amountError);
 
-let dateErrorMsg="× Please add Date";
-let amountErrorMsg="× Please add Amount.";
-let defaultMsg="";
+let dateErrorMsg = "× Please add Date";
+let amountErrorMsg = "× Please add Amount.";
+let defaultMsg = "";
 
-function vaildateDate(){
+function vaildateDate() {
     let dateValue = dateInput.value;
-    if(dateValue !=""){ 
-    error = defaultMsg;}
+    if (dateValue != "") {
+        error = defaultMsg;
+    }
     else {
-    error = amountErrorMsg;}
-    return error;    
+        error = amountErrorMsg;
+    }
+    return error;
 }
-function vaildateAmount(){ 
+function vaildateAmount() {
     let amountValue = amountInput.value;
-    if(amountValue != 0){ 
-    error = defaultMsg;}
+    if (amountValue != 0) {
+        error = defaultMsg;
+    }
     else {
-    error = amountErrorMsg;}
-    return error;  
+        error = amountErrorMsg;
+    }
+    return error;
 }
-function validate(){
+function validate() {
     let valid = true;//global validation 
-    let dateValidation=vaildateDate();
-    let amountValidation=vaildateAmount();
+    let dateValidation = vaildateDate();
+    let amountValidation = vaildateAmount();
 
-    if(dateValidation !==defaultMsg){
+    if (dateValidation !== defaultMsg) {
         dateError.textContent = dateValidation;
         document.querySelector("#date").classList.add("redborder");
         valid = false;
     }
-    if(amountValidation !==defaultMsg){
+    if (amountValidation !== defaultMsg) {
         amountError.textContent = amountValidation;
         document.querySelector("#amount").classList.add("redborder");
         valid = false;
@@ -49,24 +53,24 @@ function validate(){
 };
 
 function resetFormError() {
-    dateError.textContent=defaultMsg;
-    amountError.textContent=defaultMsg;
+    dateError.textContent = defaultMsg;
+    amountError.textContent = defaultMsg;
 }
-document.form.addEventListener("reset",resetFormError);
+document.form.addEventListener("reset", resetFormError);
 
-dateInput.addEventListener("blur",()=>{ // arrow function
-    let x=vaildateDate();
-    if(x == defaultMsg){
+dateInput.addEventListener("blur", () => { // arrow function
+    let x = vaildateDate();
+    if (x == defaultMsg) {
         dateError.textContent = defaultMsg;
         document.querySelector("#date").classList.remove("redborder");
     }
-    });
+});
 
 
-amountInput.addEventListener("blur",()=>{ // arrow function
-    let x=vaildateAmount();
-    if(x == defaultMsg){
+amountInput.addEventListener("blur", () => { // arrow function
+    let x = vaildateAmount();
+    if (x == defaultMsg) {
         amountError.textContent = defaultMsg;
         document.querySelector("#amount").classList.remove("redborder");
     }
-    });
+});

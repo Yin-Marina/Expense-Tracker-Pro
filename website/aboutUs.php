@@ -82,13 +82,15 @@
             <img class="col " src="./img/profile3.jpg" alt="Profile picture">
         </div>
         <div class="row  justify-content-around">
-            <h3 class="col " >Birdie Reid, Client</h3>
+            <h3 class="col ">Birdie Reid, Client</h3>
             <h3 class="col ">Olivia-Rose Lucas, Client</h3>
             <h3 class="col ">Naima Frank, Client</h3>
         </div>
         <div class="row  justify-content-around">
-            <p class="col ">"I just learned about Expense Tracker Pro this morning and now they have a new customer."</p>
-            <p class="col ">"I will be using this service and recommend to others. Y'all are literally the best thing I have
+            <p class="col ">"I just learned about Expense Tracker Pro this morning and now they have a new customer."
+            </p>
+            <p class="col ">"I will be using this service and recommend to others. Y'all are literally the best thing I
+                have
                 found for tracking my expenses."</p>
             <p class="col ">"Works like a charm. I love the ease of using their services."</p>
         </div>
