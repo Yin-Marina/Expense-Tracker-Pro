@@ -22,29 +22,27 @@ if (!isset($_SESSION['loggedin'])) {
 
 <body>
   <?php
-    include("./php/nav_outer.php");
-    require_once('php/database.php');
+    include("./php/nav_inner.php");
 
     if (!isset($_GET['id'])) {
       header("Location: report.php");
     }
     $id = $_GET['id'];
-    $db = db_connect();
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
       $sql = "DELETE FROM transactions WHERE id = '$id'";
-      $result = mysqli_query($db, $sql);
+      $result = mysqli_query($con, $sql);
       // redirect to the report page
       header("Location: report.php");
     } else {
       $sql = "SELECT transactions.id, date, amount, notes, name FROM transactions"
         . " join types on transactions.typeId = types.id"
         . " and transactions.id = $id";
-      $result_set = mysqli_query($db, $sql);
+      $result_set = mysqli_query($con, $sql);
       $result = mysqli_fetch_assoc($result_set);
     }
     ?>
-  <div class="container">
+  <div class="container wrap">
     <a href="report.php">&laquo; Back to List</a>
     <div>
       <h1>Delete Transaction</h1>

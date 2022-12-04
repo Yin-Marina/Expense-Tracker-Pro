@@ -68,7 +68,7 @@ if (!isset($_SESSION['loggedin'])) {
   $results = mysqli_query($con, $sql);
   ?>
 
-  <div class="container">
+  <div class="container wrap">
     <form method="get" action="report.php">
       <div class="searchWrap">
         <div class="search">
