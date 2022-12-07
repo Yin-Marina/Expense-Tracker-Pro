@@ -88,7 +88,7 @@ if (!isset($_SESSION['loggedin'])) {
   </div>
   <!-- footer -->
   <?php
-  require "./php/footer_outer.php"
+  require "./php/footer_inner.php"
     ?>
 </body>
 
