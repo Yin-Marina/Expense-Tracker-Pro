@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!DOCTYPE html>
-<html>
-
 <head>
   <!-- Apply website universal header -->
   <?php
-  require_once "./php/header.php";
+  require_once "php/header.php";
   ?>
 
   <title>Welcome to ExpenseTrackerPro</title>
@@ -16,28 +13,31 @@
   <link rel="stylesheet" type="text/css" href="css/index.css" />
 </head>
 
-<body class="bg-light" id="index-body">
+<body class="">
   <!--Nav bar-->
-  <?php
-  require "./php/nav_outer.php"
-    ?>
+  <?php 
+  require "php/nav.php"  
+  ?>
 
-  <!--Intro-->
-  <div class="container d-flex flex-column mb-3">
-    <div class="vertical-box p-2">
-    </div>
-    <h1 class="vertical-box display-1 p-2">Track your expense, anytime,
-      everywhere</h1>
+  <!--Profile-->
 
-    <div class="p-2 d-flex justify-content-left">
-      <a class="button text-center text-light text-decoration-none" href="./signup.php" role="button"> <span
-          class="h2">signup</span> </a>
+  <!-- main banner -->
+  <section class="bgimage" id="home">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
+          <h2 class="hero_title">Track your expense</h2>
+          <p class="hero_desc">Anytime, anywhere</p>
+          <button type="button" class="btn btn-outline-light btn-lg" onclick="location.href='signup.php'">Sign up now</button>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
+  
 
   <!-- footer -->
   <?php
-  require "./php/footer_outer.php"
+  require "./php/footer.php"
     ?>
 
 </body>

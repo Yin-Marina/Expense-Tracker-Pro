@@ -16,7 +16,7 @@
 
     <!--Nav bar-->
     <?php
-    require "./php/nav_outer.php"
+    require "./php/nav.php"
         ?>
 
     <!--Company Intro-->
@@ -37,38 +37,51 @@
 
     <!--Services-->
     <div class="service container text-center">
-        <div class="row ">
-            <h2 class="col gy-5">Why Expense Tracker Pro</h2>
+        <div class="">
+            <h2 class="">Why Expense Tracker Pro</h2>
         </div>
-        <div class="row justify-content-around">
-            <img class="col" src="./img/control-costs.png" alt="Control costs">
-            <img class="col" src="./img/bad-spending-habits.png" alt="Bad spending habits">
-            <img class="col" src="./img/success financial management.png" alt="Success financial management">
+        <div class="d-flex flex-row justify-content-around m-5">
+
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Control Costs</h5>
+                    
+                    <p class="card-text">The benefits of tracking your expenses include finding and eliminating bad
+                        spending
+                        habits,
+                        preventing
+                        overspending.</p>
+                    
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Find bad spending habits</h5>
+                    
+                    <p class="card-text">By tracking your expenses daily, you can control costs, and see what you're
+                        spending
+                        your money on and how much you're spending. </p>
+                    
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    
+                    <p class="card-text">Expenses tracking is essential in successful financial management. By knowing
+                        where
+                        your
+                        money goes, you
+                        can effectively sort out your financial situation and make decisions.</p>
+                   
+                </div>
+            </div>
         </div>
-        <div class="row gx-5 justify-content-around">
-            <h3 class="col gy-5 ">Control Costs</h3>
-            <h3 class="col gy-5">Find bad spending habits</h3>
-            <h3 class="col gy-5">Success financial management</h3>
-        </div>
-        <div class="row gx-5 justify-content-around">
-            <p class="col gy-5">By tracking your expenses daily, you can control costs, and see what you're spending
-                your
-                money
-                on and
-                how much you're spending. </p>
-            <p class="col gy-5">
-                The benefits of tracking your expenses include finding and eliminating bad spending habits,
-                preventing
-                overspending.
-            <p class="col gy-5">
-                Expenses tracking is essential in successful financial management. By knowing where your
-                money goes, you
-                can effectively sort out your financial situation and make decisions.</p>
-            </p>
-        </div>
+    </div>
 
 
     </div>
+    <!-- project section-->
 
     <!--Testimonials-->
     <div class="testimonials container text-center gx-5 gy-5">
@@ -77,9 +90,9 @@
         </div>
         <div class="row justify-content-around">
 
-            <img class="col " src="./img/profile1.jpg" alt="Profile picture">
-            <img class="col " src="./img/profile2.jpg" alt="Profile picture">
-            <img class="col " src="./img/profile3.jpg" alt="Profile picture">
+            <img class="col rounded-circle" src="./img/profile1.jpg" alt="Profile picture">
+            <img class="col rounded-circle" src="./img/profile2.jpg" alt="Profile picture">
+            <img class="col rounded-circle" src="./img/profile3.jpg" alt="Profile picture">
         </div>
         <div class="row  justify-content-around">
             <h3 class="col ">Birdie Reid, Client</h3>
@@ -97,7 +110,7 @@
     </div>
     <!-- footer -->
     <?php
-    require "./php/footer_outer.php"
+    require "./php/footer.php"
         ?>
 
 </body>

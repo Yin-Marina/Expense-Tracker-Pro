@@ -1,16 +1,9 @@
-.wrap {
-  background: #fff;
-  width: 385px;
-  padding: 40px;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  margin: 20px auto;
-}
+
 
 h1 {
   margin: 0 0 20px;
   line-height: 1;
-  color: #44c4e7;
+  color: #13809B;
   font-size: 32px;
   font-weight: 500;
 }

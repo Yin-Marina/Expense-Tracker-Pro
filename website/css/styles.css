@@ -2,13 +2,12 @@
 
 
 body {
-  color: var(--bs-dark)
+  
 }
 
 /* Outer Interface: Header */
-.navbar {
-  padding-left: 10% !important;
-  padding-right: 10% !important; 
+.navbar  {
+  background-color: #36BEDD!important;
   
 }
 
@@ -16,11 +15,17 @@ body {
 	background-color: #444444;
 	transition: 0.7s all linear;
 	height: 100%;
+  border-radius: 30%;
 }
 
-.footer {
-  padding-left: 10% !important;
-  padding-right: 10% !important; 
+
+
+.bgimage {
+  height:100vh;
+  background-color: rgb(0, 0, 0, 0.5);
+  background: url('../img/background.jpg') no-repeat;
+  background-size:cover;
+  position:relative;
   
 }
 
@@ -48,4 +53,24 @@ body {
 .link {
   text-decoration: none;
   color: #44c4e7;
+}
+
+footer  {
+  background-color: #36BEDD !important;
+  
+}
+
+
+#login {
+  max-width:60rem;
+
+
+}
+.wrap {
+  background: #fff;
+  width: 385px;
+  padding: 40px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  margin: 20px auto;
 }

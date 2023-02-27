@@ -17,11 +17,11 @@
 <body>
   <!--Nav bar-->
   <?php
-  require "./php/nav_outer.php"
+  require "./php/nav.php"
     ?>
 
-  <div class="container">
-    <div class="wrap">
+  <div class="bgimage">
+    <div class="wrap col-lg-12 col-md-12 col-sm-12 col-xs-12 p-3 hero-text">
       <h1>Sign Up</h1>
       <form action="signup_process.php" method="POST" onsubmit="return validateForm();">
         <div class="field">
@@ -52,7 +52,7 @@
         </div>
         <button id="submit" type="submit" class="button">Sign up</button>
       </form>
-      <p class="">Already have an account?
+      <p class="text-dark">Already have an account?
         <a class="link" href="login.php">Login</a>
       </p>
     </div>
@@ -60,7 +60,7 @@
 
   <!-- footer -->
   <?php
-  require "./php/footer_outer.php"
+  require "./php/footer.php"
     ?>
 
 </body>
