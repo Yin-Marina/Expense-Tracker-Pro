@@ -66,7 +66,9 @@
             </div>
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
+                    <h5 class="card-title">Financial management
+                        
+                    </h5>
                     
                     <p class="card-text">Expenses tracking is essential in successful financial management. By knowing
                         where

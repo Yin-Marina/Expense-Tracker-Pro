@@ -1,4 +1,4 @@
-/* Define color pallete */
+
 
 
 body {
@@ -15,7 +15,7 @@ body {
 	background-color: #444444;
 	transition: 0.7s all linear;
 	height: 100%;
-  border-radius: 30%;
+  border-radius:50%;
 }
 
 
@@ -73,4 +73,9 @@ footer  {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
   text-align: center;
   margin: 20px auto;
+}
+
+.social-network img {
+  height: 40px;
+  width: auto;
 }

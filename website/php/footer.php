@@ -50,31 +50,15 @@
           <!-- Grid column -->
 
           <!-- Grid column -->
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
-
-            <!-- Facebook -->
-            <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!" role="button"><i
-                class="fab fa-facebook-f"></i></a>
-
-            <!-- Twitter -->
-            <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!" role="button"><i
-                class="fab fa-twitter"></i></a>
-
-            <!-- Google -->
-            <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!" role="button"><i
-                class="fab fa-google"></i></a>
-
-            <!-- Instagram -->
-            <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button"><i
-                class="fab fa-instagram"></i></a>
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3 social-network">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Follow me</h6>
 
             <!-- Linkedin -->
-            <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!" role="button"><i
-                class="fab fa-linkedin-in"></i></a>
+            <a class="" href="https://www.linkedin.com/in/mutao-yin/" role="button"><img src="./img/linkedin.png"
+                alt=""></a>
             <!-- Github -->
-            <a class="btn btn-primary btn-floating m-1" style="background-color: #333333" href="#!" role="button"
-              src="images/github-sign.png"><i class="fab fa-github"></i></a>
+            <a class="" href="https://github.com/Yin-Marina" role="button" ><img
+                src="./img/github-sign.png" alt=""></a>
           </div>
         </div>
         <!--Grid row-->

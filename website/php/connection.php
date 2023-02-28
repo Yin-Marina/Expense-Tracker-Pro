@@ -1,5 +1,6 @@
 <?php
-$host = "127.0.0.1";
+$host = "127.0.0.1:3307";
+// Specified port as the default is taken from the MySQL server.
 $user = "root";
 $password = '';
 $db_name = "expense_tracker_pro";
