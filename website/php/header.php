@@ -14,7 +14,7 @@
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 
 <!-- Page specific stylesheet -->
-<link rel="stylesheet" type="text/css" href="css/index.css" />
+
 
 <link rel="icon" href="favicon.ico" />
 

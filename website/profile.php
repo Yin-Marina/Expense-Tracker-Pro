@@ -35,8 +35,9 @@ $stmt->close();
 <body class="loggedin">
 	<!--Nav bar-->
 	<?php
-    require "./php/nav_inner.php"
+    require "./php/nav_user.php"
     	?>
+<section class="bgimage">
 
 	<div class="card">
 		<h2 class="card-header">Account Detail:</h2>
@@ -67,10 +68,10 @@ $stmt->close();
 			</table>
 		</div>
 	</div>
-
+</section>
 	<!-- footer -->
 	<?php
-    require "./php/footer_outer.php"
+    require "./php/footer_user.php"
     	?>
 
 </body>

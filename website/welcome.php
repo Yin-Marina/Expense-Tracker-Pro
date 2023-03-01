@@ -32,8 +32,8 @@ $stmt2->close();
 <head>
 	<!-- Apply website universal header -->
 	<?php
-    require_once "./php/header.php";
-    ?>
+	require_once "./php/header.php";
+	?>
 
 	<title>input</title>
 
@@ -42,40 +42,40 @@ $stmt2->close();
 
 </head>
 
-<body class="loggedin bg-light">
+<body class="">
 	<!--Nav bar-->
 	<?php
-    require "./php/nav_inner.php"
-    	?>
+	require "./php/nav_user.php"
+		?>
 
-	<div class="card">
-		<h5 class="card-header">The number of Transactions you recorded:</h5>
-		<div class="card-body">
-			<h1>
-				<?php
-                echo $transactions_num;
-                ?>
-			</h1>
+	<section class="bgimage ">
+		<div class="card ">
+			<h5 class="card-header">The number of Transactions you recorded:</h5>
+			<div class="card-body">
+				<h1>
+					<?php
+					echo $transactions_num;
+					?>
+				</h1>
+			</div>
 		</div>
 
-	</div>
-
-	<div class="card">
-		<h5 class="card-header">Total Spending</h5>
-		<div class="card-body">
-			<h1>
-				<?php
-                echo round($total_spending, 2);
-                ?>
-			</h1>
+		<div class="card ">
+			<h5 class="card-header">Total Spending</h5>
+			<div class="card-body">
+				<h1>
+					<?php
+					echo round($total_spending, 2);
+					?>
+				</h1>
+			</div>
 		</div>
-
-	</div>
+	</section>
 
 	<!-- footer -->
 	<?php
-    require "./php/footer_outer.php"
-    	?>
+	require "./php/footer_user.php"
+		?>
 
 </body>
 

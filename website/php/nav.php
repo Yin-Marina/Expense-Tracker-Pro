@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg fixed-top navbarScroll navbar-dark" >
+<nav class="navbar navbar-expand-lg  navbarScroll navbar-dark" >
     <div class="container">
         <a class="navbar-brand" href="#">Expense Tracker Pro</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"

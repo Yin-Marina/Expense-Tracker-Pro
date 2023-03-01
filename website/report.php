@@ -27,7 +27,7 @@ if (!isset($_SESSION['loggedin'])) {
 
 <body>
   <?php
-  include("./php/nav_inner.php");
+  include("./php/nav_user.php");
 
   $query = '';
   $from = '';
@@ -67,48 +67,49 @@ if (!isset($_SESSION['loggedin'])) {
   }
   $results = mysqli_query($con, $sql);
   ?>
+  <section class="bgimage">
 
-  <div class="container wrap">
-    <form method="get" action="report.php">
-      <div class="searchWrap">
-        <div class="search">
-          <input type="text" class="searchInput" placeholder="Search for expenses" name="query"
-            value="<?php echo $query; ?>">
+    <div class="container bg-light p-5 object-fit-lg-contain border rounded">
+      <form method="get" action="report.php">
+        <div class="searchWrap">
+          <div class="search">
+            <input type="text" class="searchInput" placeholder="Search for expenses" name="query"
+              value="<?php echo $query; ?>">
 
-        </div>
-      </div>
-      <div class="filters">
-        <div class="filter">
-          <div class="from">
-            <label for="from">From:</label>
-            <input id="from" type="date" name="from" value="<?php echo $from; ?>"
-              max="<?php echo empty($to) ? '' : $to; ?>">
-          </div>
-          <div class="to">
-            <label for="to">To:</label>
-            <input id="to" type="date" name="to" value="<?php echo $to; ?>"
-              min="<?php echo empty($from) ? '' : $from; ?>">
           </div>
         </div>
-        <div class="sorts">
-          <div class="sort">
-            <label for="sortType">Sort type by:</label>
-            <select name="sortType" id="sortType">
-              <option value="" <?php echo empty($sortType) ? 'selected' : ''; ?>>---</option>
-              <option value="asc" <?php echo $sortType==='asc' ? 'selected' : ''; ?>>Ascending order</option>
-              <option value="desc" <?php echo $sortType==='desc' ? 'selected' : ''; ?>>Descending order</option>
-            </select>
+        <div class="filters">
+          <div class="filter">
+            <div class="from">
+              <label for="from">From:</label>
+              <input id="from" type="date" name="from" value="<?php echo $from; ?>"
+                max="<?php echo empty($to) ? '' : $to; ?>">
+            </div>
+            <div class="to">
+              <label for="to">To:</label>
+              <input id="to" type="date" name="to" value="<?php echo $to; ?>"
+                min="<?php echo empty($from) ? '' : $from; ?>">
+            </div>
           </div>
-          <div class="sort">
-            <label for="sortAmount">Sort amount by:</label>
-            <select name="sortAmount" id="sortAmount">
-              <option value="" <?php echo empty($sortAmount) ? 'selected' : ''; ?>>---</option>
-              <option value="asc" <?php echo $sortAmount==='asc' ? 'selected' : ''; ?>>Lowest to highest</option>
-              <option value="desc" <?php echo $sortAmount==='desc' ? 'selected' : ''; ?>>Highest to lowest</option>
-            </select>
+          <div class="sorts">
+            <div class="sort">
+              <label for="sortType">Sort type by:</label>
+              <select name="sortType" id="sortType">
+                <option value="" <?php echo empty($sortType) ? 'selected' : ''; ?>>---</option>
+                <option value="asc" <?php echo $sortType === 'asc' ? 'selected' : ''; ?>>Ascending order</option>
+                <option value="desc" <?php echo $sortType === 'desc' ? 'selected' : ''; ?>>Descending order</option>
+              </select>
+            </div>
+            <div class="sort">
+              <label for="sortAmount">Sort amount by:</label>
+              <select name="sortAmount" id="sortAmount">
+                <option value="" <?php echo empty($sortAmount) ? 'selected' : ''; ?>>---</option>
+                <option value="asc" <?php echo $sortAmount === 'asc' ? 'selected' : ''; ?>>Lowest to highest</option>
+                <option value="desc" <?php echo $sortAmount === 'desc' ? 'selected' : ''; ?>>Highest to lowest</option>
+              </select>
+            </div>
+            <button class="searchButton" type="submit" name="submit">Search</button>
           </div>
-          <button class="searchButton" type="submit" name="submit">Search</button>
-        </div>
       </form>
     </div>
 
@@ -123,30 +124,31 @@ if (!isset($_SESSION['loggedin'])) {
           <th>&nbsp</th>
         </tr>
         <?php while ($row = mysqli_fetch_assoc($results)) { ?>
-        <tr>
-          <td>
-            <?php echo $row['date'] ?>
-          </td>
-          <td>$
-            <?php echo $row['amount'] ?>
-          </td>
-          <td>
-            <?php echo $row['name'] ?>
-          </td>
-          <td>
-            <?php echo $row['notes'] ?>
-          </td>
-          <td><a href="<?php echo "report_edit.php?id=" . $row['id']; ?>">Edit</a></td>
-          <td><a href="<?php echo "report_delete.php?id=" . $row['id']; ?>">delete</a></td>
-        </tr>
+          <tr>
+            <td>
+              <?php echo $row['date'] ?>
+            </td>
+            <td>$
+              <?php echo $row['amount'] ?>
+            </td>
+            <td>
+              <?php echo $row['name'] ?>
+            </td>
+            <td>
+              <?php echo $row['notes'] ?>
+            </td>
+            <td><a href="<?php echo "report_edit.php?id=" . $row['id']; ?>">Edit</a></td>
+            <td><a href="<?php echo "report_delete.php?id=" . $row['id']; ?>">delete</a></td>
+          </tr>
         <?php } ?>
       </table>
     </div>
-  </div>
+    </div>
+  </section>
   <!-- footer -->
   <?php
-  require "./php/footer_outer.php"
-  ?>
+  require "./php/footer_user.php"
+    ?>
 </body>
 
 </html>

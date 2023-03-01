@@ -1,8 +1,9 @@
 
 
 
-body {
-  
+* {
+  margin:0;
+  padding:0;
 }
 
 /* Outer Interface: Header */
@@ -11,12 +12,12 @@ body {
   
 }
 
- .navbar-collapse li a:hover {
+ /* .navbar-collapse li a:hover {
 	background-color: #444444;
 	transition: 0.7s all linear;
 	height: 100%;
   border-radius:50%;
-}
+} */
 
 
 
